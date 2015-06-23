@@ -14,16 +14,6 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:padding="10dp"
-        android:text="hi"
-        android:textSize="20dp"
-        android:textStyle="bold" />
-
-    <TextView
         android:id="@+id/tv_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

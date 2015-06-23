@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Filterable;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.rama.bean.ContactValue;
@@ -31,7 +30,6 @@ public class ContactAdapter extends BaseAdapter implements Filterable {
 
 	public class ViewHolder {
 		TextView name;
-		TextView email;
 		TextView details;
 	}
 
@@ -59,7 +57,6 @@ public class ContactAdapter extends BaseAdapter implements Filterable {
 			holder.name = (TextView) convertView.findViewById(R.id.tv_name);
 			// holder.photo = (ImageView)
 			// convertView.findViewById(R.id.iv_photo);
-			holder.email = (TextView) convertView.findViewById(R.id.email);
 			holder.details = (TextView) convertView
 					.findViewById(R.id.tv_details);
 
@@ -73,7 +70,6 @@ public class ContactAdapter extends BaseAdapter implements Filterable {
 		}
 
 		holder.name.setText(singleName.get(position).getName());
-		holder.email.setText(singleName.get(position).getPhoto());
 		holder.details.setText(singleName.get(position).getDetails());
 		return convertView;
 	}

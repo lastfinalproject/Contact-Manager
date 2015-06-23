@@ -252,7 +252,8 @@ public class ContactsDetails extends Fragment {
 
 			Cursor c = getActivity().getContentResolver().query(
 					ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,
-					null, null, " ASC ");
+					null, null,
+					ContactsContract.Contacts.DISPLAY_NAME + " ASC ");
 			while (c.moveToNext()) {
 
 				String contactName = c
@@ -261,11 +262,8 @@ public class ContactsDetails extends Fragment {
 				String phNumber = c
 						.getString(c
 								.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
-				String email = c
-						.getString(c
-								.getColumnIndex(ContactsContract.CommonDataKinds.Email.CONTENT_ITEM_TYPE));
 
-				contacts.add(new ContactValue(contactName, email, phNumber));
+				contacts.add(new ContactValue(contactName, phNumber));
 
 			}
 			c.close();
