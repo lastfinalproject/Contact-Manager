@@ -11,12 +11,12 @@
         <item>Marge</item>
         <item>Setting</item>
     </string-array>
-    
-    
-     <array name="nav_drawer_icons">
+
+    <array name="nav_drawer_icons">
         <item>@drawable/ic_home</item>
         <item>@drawable/ic_action_merge</item>
-       
     </array>
-    
+
+    <string name="title_activity_search">SearchActivity</string>
+
 </resources>

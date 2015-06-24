@@ -30,7 +30,7 @@ public class ContactAdapter extends BaseAdapter implements Filterable {
 
 	public class ViewHolder {
 		TextView name;
-		TextView details;
+		TextView phone;
 	}
 
 	@Override
@@ -57,8 +57,8 @@ public class ContactAdapter extends BaseAdapter implements Filterable {
 			holder.name = (TextView) convertView.findViewById(R.id.tv_name);
 			// holder.photo = (ImageView)
 			// convertView.findViewById(R.id.iv_photo);
-			holder.details = (TextView) convertView
-					.findViewById(R.id.tv_details);
+			holder.phone = (TextView) convertView
+					.findViewById(R.id.tv_phone);
 
 			// String str = ((TextView) convertView.findViewById(R.id.txt_eng))
 			// .getText().toString();
@@ -70,7 +70,7 @@ public class ContactAdapter extends BaseAdapter implements Filterable {
 		}
 
 		holder.name.setText(singleName.get(position).getName());
-		holder.details.setText(singleName.get(position).getDetails());
+		holder.phone.setText(singleName.get(position).getPhone());
 		return convertView;
 	}
 

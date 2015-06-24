@@ -2,19 +2,20 @@ package com.rama.bean;
 
 public class ContactValue {
 	private String name;
-	private String photo;
-	private String details;
+	private String phone;
+	private String email;
 	
 	
 	
-	public ContactValue(String name, String details) {
+	
+	public ContactValue(String name, String phone) {
 		this.name = name;
-		this.details = details;
+		this.phone = phone;
 	}
-	public ContactValue(String name, String photo, String details) {
+	public ContactValue(String name, String phone, String email) {
 		this.name = name;
-		this.photo = photo;
-		this.details = details;
+		this.phone = phone;
+		this.email = email;
 	}
 	public String getName() {
 		return name;
@@ -22,18 +23,19 @@ public class ContactValue {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getPhoto() {
-		return photo;
+	public String getPhone() {
+		return phone;
 	}
-	public void setPhoto(String photo) {
-		this.photo = photo;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
-	public String getDetails() {
-		return details;
+	public String getEmail() {
+		return email;
 	}
-	public void setDetails(String details) {
-		this.details = details;
+	public void setEmail(String email) {
+		this.email = email;
 	}
+	
 	
 	
 	

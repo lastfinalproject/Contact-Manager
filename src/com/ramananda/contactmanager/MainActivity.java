@@ -10,8 +10,10 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
+import android.view.MenuItem;
 
 import com.ramananda.adapter.FragmentPageAdapter;
+import com.ramananda.fragment.child.SearchFragment;
 
 public class MainActivity extends FragmentActivity implements TabListener {
 	ActionBar actionBar;
@@ -37,7 +39,7 @@ public class MainActivity extends FragmentActivity implements TabListener {
 		ActionBar.Tab contacts = actionBar.newTab();
 		actionBar.setBackgroundDrawable(new ColorDrawable(Color
 				.parseColor("#00968C")));
-		
+
 		contacts.setText("Contacts").setTabListener(this);
 		actionBar.addTab(contacts);
 		actionBar.addTab(actionBar.newTab().setText("Recents")
@@ -58,7 +60,6 @@ public class MainActivity extends FragmentActivity implements TabListener {
 
 			@Override
 			public void onPageScrollStateChanged(int arg0) {
-				// TODO Auto-generated method stub
 
 			}
 		});
@@ -71,6 +72,26 @@ public class MainActivity extends FragmentActivity implements TabListener {
 		getMenuInflater().inflate(R.menu.main, menu);
 
 		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.action_search:
+			restoreActionBar();
+			// Intent searchIntent = new Intent(MainActivity.this,
+			// SearchFragment.class);
+			// Bundle banAnimation = ActivityOptions.makeCustomAnimation(
+			// getApplicationContext(), R.anim.animation_next,
+			// R.anim.animaton_pre).toBundle();
+			// startActivity(searchIntent, banAnimation);
+
+			break;
+
+		default:
+			break;
+		}
+		return super.onOptionsItemSelected(item);
 	}
 
 	@Override
@@ -91,4 +112,18 @@ public class MainActivity extends FragmentActivity implements TabListener {
 
 	}
 
+	public void restoreActionBar() {
+		ActionBar actionBar = getActionBar();
+		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
+		// actionBar.setDisplayShowTitleEnabled(true);
+		viewPager.removeAllViews();
+	}
+
+	public void addSearch() {
+
+		SearchFragment sr = new SearchFragment();
+		android.support.v4.app.FragmentTransaction fts = getSupportFragmentManager()
+				.beginTransaction();
+		//ft.add(R.id.mainpager, ft);
+	}
 }
