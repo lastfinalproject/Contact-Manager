@@ -50,16 +50,18 @@ public final class R {
         public static final int ic_drawer=0x7f020008;
         public static final int ic_home=0x7f020009;
         public static final int ic_launcher=0x7f02000a;
-        public static final int list_item_bg_normal=0x7f02000b;
-        public static final int list_item_bg_pressed=0x7f02000c;
-        public static final int list_selector=0x7f02000d;
+        public static final int index=0x7f02000b;
+        public static final int list_item_bg_normal=0x7f02000c;
+        public static final int list_item_bg_pressed=0x7f02000d;
+        public static final int list_selector=0x7f02000e;
     }
     public static final class id {
-        public static final int action_add=0x7f0b0007;
-        public static final int action_search=0x7f0b0008;
-        public static final int action_settings=0x7f0b0009;
+        public static final int action_add=0x7f0b0008;
+        public static final int action_search=0x7f0b0009;
+        public static final int action_settings=0x7f0b000a;
         public static final int contactList=0x7f0b0002;
         public static final int mainpager=0x7f0b0000;
+        public static final int psBar=0x7f0b0007;
         public static final int searchContactList=0x7f0b0001;
         public static final int textView1=0x7f0b0006;
         public static final int tv_name=0x7f0b0003;
@@ -72,18 +74,20 @@ public final class R {
         public static final int contacts_fragment=0x7f030002;
         public static final int lv_layout=0x7f030003;
         public static final int recent_fragment=0x7f030004;
-        public static final int search_fragment=0x7f030005;
-        public static final int speed_fragment=0x7f030006;
+        public static final int speed_fragment=0x7f030005;
+        public static final int splash_screen=0x7f030006;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;
         public static final int search=0x7f0a0001;
+        public static final int splash_screen=0x7f0a0002;
     }
     public static final class string {
         public static final int action_settings=0x7f070001;
         public static final int app_name=0x7f070000;
         public static final int hello_world=0x7f070002;
         public static final int title_activity_search=0x7f070003;
+        public static final int title_activity_splash_screen=0x7f070004;
     }
     public static final class style {
         /** 

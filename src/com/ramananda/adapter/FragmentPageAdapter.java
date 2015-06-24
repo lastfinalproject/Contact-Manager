@@ -23,6 +23,7 @@ public class FragmentPageAdapter extends FragmentPagerAdapter {
 			return new ContactsDetails();
 		case 2:
 			return new RecentDetails();
+		
 		default:
 			break;
 		}

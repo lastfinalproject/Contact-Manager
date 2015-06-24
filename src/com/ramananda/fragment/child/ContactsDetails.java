@@ -3,7 +3,11 @@ package com.ramananda.fragment.child;
 import java.util.ArrayList;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -14,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.rama.bean.ContactValue;
 import com.ramananda.adapter.ContactAdapter;
@@ -30,7 +35,9 @@ public class ContactsDetails extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.contacts_fragment, container, false);
-		// contactList = new ArrayList<ContactValue>();
+
+		getActivity().getActionBar().setBackgroundDrawable(
+				new ColorDrawable(Color.parseColor("#00968C")));
 
 		// Adapter to set data in the listview
 
@@ -45,8 +52,15 @@ public class ContactsDetails extends Fragment {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View v,
 					int position, long id) {
-			//	String phone = contacts.get(position).getPhone();
-
+				String phone = contacts.get(position).getPhone();
+				try {
+					Intent callIntent = new Intent(Intent.ACTION_CALL);
+					callIntent.setData(Uri.parse("tel:" + phone));
+					startActivity(callIntent);
+				} catch (Exception e) {
+					Toast.makeText(getActivity(), e.getMessage(),
+							Toast.LENGTH_LONG).show();
+				}
 			}
 		});
 
